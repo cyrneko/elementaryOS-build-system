@@ -9,4 +9,5 @@ ENDPOINT="$4"
 BUCKET="$5"
 
 ./build.sh "$CONFIG_FILE"
-./upload.sh "$CONFIG_FILE" "$KEY" "$SECRET" "$ENDPOINT" "$BUCKET"
+# Skipping this
+# ./upload.sh "$CONFIG_FILE" "$KEY" "$SECRET" "$ENDPOINT" "$BUCKET"

@@ -24,4 +24,9 @@ jobs:
 
     - name: Build and upload daily .iso
       run: |
-        ./workflows.sh etc/terraform-daily-8.0-azure.conf "${{ secrets.key }}" "${{ secrets.secret }}" "${{ secrets.endpoint }}" "${{ secrets.bucket }}"
+        ./workflows.sh etc/terraform-daily-8.0-azure.conf
+    - name: Upload ISO to GitHub Actions
+      uses: actions/upload-artifact@v4
+      with:
+        name: ISO 8.0 daily
+        path: builds/amd64/*
